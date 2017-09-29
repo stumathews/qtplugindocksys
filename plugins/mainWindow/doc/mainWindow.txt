@@ -1,0 +1,31 @@
+
+MainWindow Plugin 
+Author : S R C Mathews
+Date : Throughout aug/sept.
+----------------------------
+
+Functionality that mainWindow Plugin Implments :
+
+The main window plugin is a core plugin that applications can use to create a truly plugin-able application.
+MainWindow plugin provides the correct dockable functionality that allows features to be added dynamically
+by way of dockItem plugins that would call mainWindow functions.
+
+A mainWindow plugin is actually a dockable feature wrapper around a QMainWindow Object in QT4, we essentially
+use the QT4 API for QMainWindow and provide another API layer to the plugin implementer to use.
+This layer essentially calls QT4 API - but this API we provide is their to provide dockable/dockItem plugin features
+that correctly fit into the plugin theory model that this system is based on.
+
+Thus MainWindow plugin essentially will/can do anything that a 'MainWindow' can do in QT4 initially.
+But we can do more with it - esspecially making it reusable - in terms of our API which is a interface for plugins.
+
+Main Window is expected to do :
+
+Main Functioality :
+
+	Menu.
+	ToolBar.
+	StatusBar.
+	CentralWidget.
+	WindowFeatures.
+	Popup Menus.
+

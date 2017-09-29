@@ -1,0 +1,148 @@
+
+Developers Notes - developers wishing to help out.
+----------------
+
+Welcome, Developers to this project ( Dockable/DockItem Plugin System API ).
+I'd like to firstly  give a detailed and exact description of the project so that this software map is filled
+in and their are no dark areas.
+
+If you are a programmer or know programming and can do some programming - you are a developer.
+We are not supermans or intend to dominate the world and we don't pretend that we know everything, so please,
+help out where you can - we don't expect you to be a DR. in Computer Science.Your input as a developer 
+is crucial to us - no matter your level.We have jobs here in this project for all sorts of levels of experiance.
+Their is no shortage of areas to work in, its just the time that you put in, that is up to you.
+
+
+Description of project - for developers.
+----------------------------------------
+
+This project( qtplugindocksys ) aims at allowing a application developer to develop components of his/her application
+independantly, and then introducing it in a dynamic manner into the application.
+The system relies around the concept of plugins, but more specifically in the case of this project, the
+implementation of these plugins according to a specific plugin model.
+
+The plugin model is called the Dockable/DockItem plugin model.
+
+This plugin model defines :
+	1. How these plugins will load and become apart of a existing application.
+	2. How they are managed.
+	3. How they communicate and interact with each other.
+	4. How plugins can dock into a dockable plugin.
+
+The last feature is the core of this project.
+
+We provide a way to create plugins that can dock into other plugins and control the features and functions of that plugin.
+The model concept is that 'systems' or 'core' functionality be isolated by means of dockable plugins when created.
+Creating dockable plugins to represent a 'system' allows this system to be controlled and extended by having dockItem 
+plugins 'dock' into it.
+
+This concept can be implemented in creating a entire application to creating and application that allows for it as
+an add on feature.The feature being a dockable/DockItem system plugin loader.
+
+Example :
+
+If a comercial company was an application, then the following would be the systems of that application :
+	
+	- Sales Department.
+	- Administration Department.
+	- Marketing Department.
+	- Financial Department.
+	
+These would all be systems or Dockable plugins in the applciations.
+The following shows the dockItems that would control/exist in those systems :
+	Sales Department.
+		+ Manager
+		+ Sales coordinator
+		+ Sales Consultant
+		+ Accountant
+		+ ...
+	Administration Department.
+		+ Secratery
+		+ Filing Clerk
+		+ Communications consultant
+		+ ...
+	Marketing Department.
+		+ Marketing manager
+		+ Advertising manager
+		+ Graphic dsigner
+		+ ...
+	Financial Department.
+		+ Treasurer
+		+ Financial analyst
+		+ Accountant
+		+ ...
+	
+These dockItem plugins would plugin into a system and then use it and control it according to its functions.
+But these functions would be isolated to the functinoality that the system provides.(only limitation)
+
+So this is how the dockable/DockItem plugins system API provies similar design and implementation to your needs as
+a programmer designing and implementing a software project.
+
+System 
+   - Functioning Item
+   - Functioning Item
+   - Functioning Item
+System 
+  - Functioning Item 
+  - ...
+...
+
+So the System provides the Functioning Item or dockItem the means for it to function.But the crux is that the functioning
+is of the dockItem is isolated and totally separate from the system's code and the application's code and any other plugins code.
+
+Just like a Financial Department provides and calculator, computer spread sheet application, bank details etc..as a whole,
+the employees (dockItems) would utilise these services in diffirent ways - but they all depend and use the Financial department.
+And the dockItems could only function if they were pluged into the system that provides them with their functionality.
+
+
+With this in mind creating a system as a dockable plugin allows for many later introductions of dockItem plugins.
+You'd create a system and then later you'd allow plugins to use that system and controll it.
+
+This is what this project aims to do.
+
+In a nutshel :
+	The framework provides means to wrap your applications logic into dockable plugins.
+	The framework then also provides the means to create dockItem plugins to plugin into these dockable(system) plugins.
+	
+Now the really special (Well, I think so ) part of this is :
+	1. Code is isolated into managable parts( plugins )
+	2. Error can be isolated to these managable parts( plugins )
+	3. Extending an applications means creating a dockItem plugin without touching any other code in application.
+	4. The introduction of new code/functionality into a existing application is easy.
+	5. The distinction between parts of an application is easily realised ( systems )
+	6. Developmental rate is increated - the application is finished essentially before you start :
+	  Ie. The application is finished once the systems have been completed, the actual functioning of these
+	  systems is/can be created later ( as dockItem plugins )
+	7. Projects become more managable.
+	8. Program capabilities are infinite.
+	9. Projects are easier to maintain
+	
+	
+At this stage we have and are dependant on QT4 for two things :
+	1. PluginLoader
+	2. QT4 Signals/Slot mechanism
+	
+In time to come I hope we can lift these restrictions and produce a project that can co-exist with any application 
+development with no limitation to framework being used.
+To understand this better see DEPENDANT.txt.
+
+I hope you as deveopers aiming to enhance and develop this project( and use it ) will find this project well worth
+the effort.
+
+
+Specific Information :
+
+	1. How it works   ( howItWorks.txt )
+	2. Where's what code. ( whereIsWhatCode.txt )
+	3. The Dockable/DockItem Plugin Model. ( pluginModel.txt )
+	4. How far is the project. ( howFarIsTheProject.txt )
+	5. Contact Information. ( contactInformation.txt )
+	
+
+
+Project Administrator
+
+StuMathews
+
+
+

@@ -1,0 +1,33 @@
+positioninig.txt
+----------------
+
+QApplication app( argc, argv );
+
+PluginManager->set_Plugin_directory("./pluginsPlcace/");
+PluginManager->load_Plugins_From_Plugin_Directory(); // load each plugin, and manage what is neeed.
+
+
+return app.exec();
+
+
+
+-----------------------------------
+-----------------------------------
+
+If Plugin manager gets a Dockable Item -> manage It ( We are top level )
+if Plugin Manager gets a dockItem -> find the correct DockableItem and pass it to it for managment.
+	if it cant find it -> dockable object not loaded yet -> store in que.
+
+once all plugins are loaded -> traverse through each dockable object and load it.
+	-> pass dockable object(parent) to each child(dockItem) and load() each dockItem.
+	-> from here each dockItem is indepenant and works with the passed dockable object.
+
+
+	To find out if a dockItem belongs to a Dockable object :
+	-------------------------------------------------------
+
+	Take each dockItem and pass it to each dockableObject's isYourPlugin() function and if
+	the dockable object returns false, move on to the next dockable object.
+	In the dockable Object the correct casts will check for the right types of plugins suitable for
+	that particular dockable object.
+	

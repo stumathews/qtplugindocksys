@@ -1,0 +1,11 @@
+Revised:
+---------
+
+Suggested procedure :
+	load all plugins into a floating state where they are all instantiated, from this state pass information
+	between them :
+
+		[DockablePlugin] <----> [DockItemPlugin]
+
+		from this state any objects passed to and from each object will be valid and also instantiated.
+

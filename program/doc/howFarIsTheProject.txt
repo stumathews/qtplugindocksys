@@ -1,0 +1,31 @@
+How far is the Project ?
+-------------------------
+
+YEAR 2006 :
+------------
+
+The initial planning is done.
+Initial planing implementation is done...almost
+The project functions.
+
+The project is not ready for public consumption yet because these things still need to be sorted :
+
+#1 The project now requires some developer's input in terms of implementing it practicaly :
+    + How is the best way to produce it to clients ... ?
+    + In what ways would we best use it in an application ... ?
+    + How will it affect this or that ... ?
+#2 We need to figure how to make things more simple but not hide anything
+    + Grouped classes ?
+    + Trash inheritance dependancy.
+    
+#3 IPC needs to be implemented
+#4 Plugin managment needs to be implemented.
+
+And then letting those developers implement it this those ways...
+
+What needs to be done in the future ?
+-------------------------------------
+
+Sugesstions ?
+Basically short term goal, get rid of QT4 restrictions.
+

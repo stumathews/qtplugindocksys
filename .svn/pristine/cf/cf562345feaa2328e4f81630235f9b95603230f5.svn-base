@@ -1,0 +1,29 @@
+
+Creavats :
+
+	The Dockable/DockItem Plugin System API :
+	
+	+ Needs QT4 to run :
+
+		The instantiation of serialized objects(plugins) on the filesystem is done using QT4.
+		The communication between plugins.
+
+The QT4 library provides a way to take a object and write it to the filesystem.
+Then take that object and instantiate it and use it in the application.
+This process is called instaniating and serialised object.
+A Serialised object is a file that represents a object.
+When I say object I mean a C++ instance.
+Remember a object is an instance of a class and a instance is what is the result
+of initialising a serialized object( a plugin or file ).
+
+So in this respect , we are borrowing QT4's PluginLoader class.
+I intend to make my own PluginLoader class sometime, but for now this API seems more usefull to QT4 deveopers.
+But in theory if we can develop our own object instanitator we can offer this framework to other developers working on 
+other object orientated frameworks...and object is and object no matter where it is...
+
+The signal/slot mechanism is also planning to be used for IPC ( Inter plugin Communication ).
+This also will tie us down to QT4.
+
+Again Only with the help of developers out there, will these restrictions be lifted.
+
+But for the mean time project Dockable/DockItem Plugin System API will be restricted to QT4 developers.

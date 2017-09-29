@@ -1,0 +1,95 @@
+
+Application Dockable API.
+
+The goal of doing this is to create an GUI application that can be extended by plugins.
+
+"GUI Application" :
+---------------------
+
+This framework builds GUI application, that centers around a QMainWindow Object.
+
+"Extended"
+-------------------:
+
+This framework aims add on features onto the application, by adding them as objects that perform 'work'.
+The idea is to encapsulate the QMainWindow with 'Dockable Features' and then create 'dock items' to
+fit into the Dockable QMainWindow.
+
+"Plugins"
+
+Plugins are 'dock item' objects that fit into 'dockable' Objects.
+
+
+Classess:
+----------
+
+   [AnyObject] -> encapsulated with 'Dockable Features' = Certain Dockable Object.
+
+   Define and compose this Certain Dockable Object. ( Make for instance a 'DockableQMainWindow' Object ).
+
+   
+   [AnyObject] -> encapsulate with 'Dock Item Features' = Certain Dock Item Object
+
+   Define and compose this Certain Dock Item Object. ( Make for instance a 'ToolBar' Object ).
+
+
+   Certain Dockable Object.
+   Certain Dock Item Object.
+
+
+   Make A QMainWindow Dockable by :
+   	DockableQMainWidow : public DockableFeatures. = DockableQMainWindow.
+	-> now you have a dockable object that adheres to 'docking rules'
+	-> But now you need to make your object do certain things -> make many member routines..
+	-> these many routines become the interface that DockItems will want to call.
+
+
+   Make a QToolBar Dock Item by :
+   	DockableQToolBar : public DockItemFeatures = QToolBarDockItem
+	-> how you have a dock Items object that adheres to being a 'dockItemFeatures'
+	-> now make it do things and then call certain features from dockableFeatures Object.
+	
+
+
+Making Dockable Object from scratch :
+	Inherit From DockableFeatures Object.
+	Define all member functions -> this is building up a interface for your DockableObject.
+Making DockItem Object from scratch :
+	Inherit From DockItemFeatures Object.
+	Inherit the interface from YOUR DockableObject
+	Define all you member functions and then call features from the Dockable Object according to inherited interface.
+
+
+Making a Dockable Object that is itself also a DockItem from scratch :
+
+	Inherit From DockableFeatures Object.
+	Define all member functions -> this is building up a interface for your DockableObject.
+	Inherit From DockItemFeatures Object that you'll be a dock item for.
+	Inherit the interface from YOUR DockableObject that you'll be a dock item for.
+	Define all you member functions and then call features from the Dockable Object according to inherited interface.
+
+
+
+
+
+Plugin Managers:
+	Each Dockable Object Must derive from DockablePluginManager to provide managment of its child dock items.
+
+Generic Objects :
+	DockableFeatures.
+	DockItemFeatures.
+	DockablePluginmanager.
+
+	this produces 3 kinds of objects 
+		1. Dockable
+		2. DockItem
+		3. DockablePluginManager
+
+
+
+	
+
+
+
+	
+	c

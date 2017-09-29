@@ -1,0 +1,12 @@
+Defining the needs of this project.
+-----------------------------------
+
+Plugin To provide functionality where a isolated system can be developed, loaded into the application
+and then that system can be extended.
+Wheather that system be a GUI effect or a logic effect is entirely up to the pluign and the developer that
+implements and designs that plugin.
+
+The plugin relies on QT4's plugin system.
+
+Implementating the plugin into an existing applications code.
+Designing applicatinos that will use plugins for major functionality.
